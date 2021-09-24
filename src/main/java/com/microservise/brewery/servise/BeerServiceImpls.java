@@ -1,10 +1,12 @@
 package com.microservise.brewery.servise;
 
 import com.microservise.brewery.web.model.BeerDto;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+@Slf4j
 @Service
 public class BeerServiceImpls implements BeerService {
 
@@ -26,5 +28,15 @@ public class BeerServiceImpls implements BeerService {
                 .beerStyle("light")
                 .upc(5657757L)
                 .build();
+    }
+
+    @Override
+    public void updateBeer(UUID beerId, BeerDto beerDto) {
+        log.debug("Updating beer....");
+    }
+
+    @Override
+    public void deleteBeer(UUID id) {
+        log.debug("Deleting beer....");
     }
 }
