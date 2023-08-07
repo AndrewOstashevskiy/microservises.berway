@@ -22,7 +22,7 @@ class BeerServiceImplsTest {
     BeerDto beerById = beerServiceImpl.getBeerById(id);
     Assertions.assertEquals(
         BeerDto.builder()
-            .id(UUID.randomUUID())
+            .id(id)
             .beerName("first")
             .beerStyle("light")
             .upc(1233525L)
